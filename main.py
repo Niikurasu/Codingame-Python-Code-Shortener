@@ -2,18 +2,13 @@
 # coding: utf8
 
 """
-Codingame Python Code Shortener
-Version - 1
-Niikurasu :)
+    Name:       Codingame Python Code Shortener
+    Version:    1.0
+    Author:     Niikurasu :)
 """
 
 import python_minifier
-from colorama import Fore, Back, Style, init
-init()
-
-# print out 
-
-
+from colorama import Fore, Style, init
 
 # read code from text file
 with open("code.txt") as file:
@@ -44,7 +39,8 @@ u16_length = len(u16_code)
 # change code if it's shorter
 if u16_length < len(SOURCE_CODE):
     SOURCE_CODE = u16_code
-
+# print out different code lengths
+init()
 print(Fore.RED + Style.BRIGHT + "Starting length:" + Style.RESET_ALL, original_length)
 print(Fore.RED + Style.BRIGHT + "Minified length:"+ Style.RESET_ALL, minified_length)
 print(Fore.RED + Style.BRIGHT + "UTF-16 length:" + Style.RESET_ALL, u16_length)
