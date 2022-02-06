@@ -11,7 +11,7 @@ import python_minifier
 from colorama import Fore, Style, init
 
 # read code from text file
-with open("code.txt") as file:
+with open("code.py") as file:
     lines = file.readlines()
 SOURCE_CODE = "".join(i for i in lines)
 
