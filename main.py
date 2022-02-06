@@ -28,12 +28,8 @@ if minified_length < original_length:
     SOURCE_CODE = minified
 
 # convert code to utf-16
-try:
-    t = bytes(SOURCE_CODE, 'utf8').decode('utf16')
-except:
-  index = SOURCE_CODE.index(')')
-  SOURCE_CODE = SOURCE_CODE[:index] + ' ' + SOURCE_CODE[index:]
-  t = bytes(SOURCE_CODE, 'utf8').decode('utf16')
+
+t = bytes(SOURCE_CODE, 'utf8').decode('utf16')
 u16_code = f"exec(bytes('{t}','u16')[2:])"
 u16_length = len(u16_code)
 # change code if it's shorter
