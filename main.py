@@ -8,7 +8,8 @@ Niikurasu :)
 """
 
 import python_minifier
-from colorama import Fore, Back, Style
+from colorama import Fore, Back, Style, init
+init()
 
 # print out 
 
@@ -44,11 +45,12 @@ u16_length = len(u16_code)
 if u16_length < len(SOURCE_CODE):
     SOURCE_CODE = u16_code
 
-print("Starting length:", original_length)
-print("Minified length:", minified_length)
-print("UTF-16 length:", u16_length)
+print(Fore.RED + Style.BRIGHT + "Starting length:" + Style.RESET_ALL, original_length)
+print(Fore.RED + Style.BRIGHT + "Minified length:"+ Style.RESET_ALL, minified_length)
+print(Fore.RED + Style.BRIGHT + "UTF-16 length:" + Style.RESET_ALL, u16_length)
+
 
 # print result
-print('\nShortest Code:')
+print(Style.RESET_ALL + 'Shortest Code:\n')
 
 print(SOURCE_CODE)
