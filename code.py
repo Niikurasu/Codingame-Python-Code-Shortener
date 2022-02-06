@@ -1,1 +1,2 @@
-print(sum(ord(i)-97 for i in input().lower() if i.isalpha()))
+import math
+print(int(math.log2(int(input())))+1)
