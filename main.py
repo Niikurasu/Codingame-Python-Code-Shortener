@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# coding: utf8
 
 """
     Name:       Codingame Python Code Shortener
