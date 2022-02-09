@@ -1,3 +1,6 @@
+"""
+This is just an example of how you can shorten your code
+"""
 string = input().lower().replace(" ", "")
 x = ""
 for i in string:
