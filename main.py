@@ -34,7 +34,7 @@ def main(f):
     SOURCE_CODE = "".join(i for i in lines)
 
     # minify code
-    minified = python_minifier.minify(SOURCE_CODE)
+    minified = python_minifier.minify(SOURCE_CODE, remove_literal_statements=True, rename_globals=True)
 
     # check code sizes
     original_length = len(SOURCE_CODE)
